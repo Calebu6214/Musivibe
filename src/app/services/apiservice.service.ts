@@ -21,16 +21,16 @@ export class ApiserviceService {
  
 
   public getallTracks():Observable<any>{
-    let trackUrl='https://corsanywhere.herokuapp.com/http://api.deezer.com/chart/0/tracks';
+    let trackUrl='https://enigmatic-island-10996.herokuapp.com/http://api.deezer.com/chart/0/tracks';
     return this.httpclient.get(trackUrl);
   }
 
   public getallGenre():Observable<any>{
-    let genreUrl='https://corsanywhere.herokuapp.com/https://api.deezer.com/genre/';
+    let genreUrl='https://enigmatic-island-10996.herokuapp.com/https://api.deezer.com/genre/';
     return this.httpclient.get(genreUrl);
   }
   public getallArtists():Observable<any>{
-    let artistUrl='https://corsanywhere.herokuapp.com/https://api.deezer.com/artist/27';
+    let artistUrl='https://enigmatic-island-10996.herokuapp.com/https://api.deezer.com/artist/27';
     return this.httpclient.get(artistUrl);
   }
   public getspotifyRec(query:string):Observable<any>{

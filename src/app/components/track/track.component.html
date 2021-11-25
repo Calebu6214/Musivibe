@@ -10,7 +10,7 @@
           <div class="row">
               <div class="col-md-3" *ngFor="let track of tracks">
                   <div class="card mt-3" style="border-color: navy;width: 100%;">
-                      <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);border-radius:30px ;">
+                      <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);">
                           <div><img src="{{track.artist.picture_small}}" alt="" style="border-radius:50% ;"></div>
                           <p class="lead">{{track.title}}</p>
                           <audio controls style="width: 80%;">
@@ -24,7 +24,7 @@
       <div class="card-body" style="color: white;display: none;" id="mine">
           <h1 class="text-center" style="color: white;">For you</h1>
         <div class="container">
-          <form #recoform="ngForm" (ngSubmit)="getdeezerecs(recoform.value)" novalidate>
+          <form #recoform="ngForm" style="width: 50%;margin-left: 27%;" (ngSubmit)="getdeezerecs(recoform.value)" novalidate>
              <div class="form-group">
                <label>Artist</label>
                <input type="text" required class="form-control"  name="artist" ngModel>
@@ -43,7 +43,7 @@
           <div class="row">
               <div class="col-md-3" *ngFor="let item of recos">
                   <div class="card mt-3" style="border-color: navy;width: 80%;">
-                      <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);border-radius: 30px;height: 40%;">                          
+                      <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);height: 40%;">                          
                           <p class="lead">Title : {{item.song}}</p>                                                                           
                       </div>
                   </div>
@@ -62,7 +62,7 @@
         <div class="row">
             <div class="col-md-3" *ngFor="let song of reccommendations">
                 <div class="card mt-3" style="border-color:navy;width: 80%;">
-                    <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);border-radius: 30px;height: 40%;">
+                    <div class="card-body  text-white text-center" style="background-color: rgb(3, 3, 65);height: 40%;">
                         <div><img src="{{song.url}}" alt="" style="border-radius:50% ;height: 190px;width: 50%;"></div>
                         <p class="lead">Title : {{song.track_name}}</p>
                         <p>Artist : {{song.artist_name}}</p>
